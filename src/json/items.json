@@ -1,0 +1,74 @@
+{
+    "garage-sale-items": [
+        {
+            "name": "Old Bicycle",
+            "price": 50,
+            "available": 3,
+            "condition": "Used",
+            "description": "A slightly rusty but functional bicycle."
+        },
+        {
+            "name": "Vintage Record Player",
+            "price": 100,
+            "available": 1,
+            "condition": "Good",
+            "description": "A classic record player from the 70s, still works great."
+        },
+        {
+            "name": "Wooden Coffee Table",
+            "price": 75,
+            "available": 2,
+            "condition": "Fair",
+            "description": "A sturdy coffee table with some scratches."
+        },
+        {
+            "name": "Set of Golf Clubs",
+            "price": 150,
+            "available": 1,
+            "condition": "Good",
+            "description": "A complete set of golf clubs, perfect for beginners."
+        },
+        {
+            "name": "Box of Books",
+            "price": 20,
+            "available": 5,
+            "condition": "Used",
+            "description": "A mixed collection of novels and non-fiction books."
+        },
+        {
+            "name": "Antique Vase",
+            "price": 200,
+            "available": 1,
+            "condition": "Excellent",
+            "description": "A beautiful vase from the early 1900s, in perfect condition."
+        },
+        {
+            "name": "Camping Tent",
+            "price": 60,
+            "available": 2,
+            "condition": "Good",
+            "description": "A two-person tent, used but still waterproof."
+        },
+        {
+            "name": "Kitchen Mixer",
+            "price": 30,
+            "available": 4,
+            "condition": "Fair",
+            "description": "A basic kitchen mixer, works but has some wear."
+        },
+        {
+            "name": "Board Games Collection",
+            "price": 40,
+            "available": 1,
+            "condition": "Used",
+            "description": "A collection of popular board games, some pieces missing."
+        },
+        {
+            "name": "Old Television",
+            "price": 80,
+            "available": 1,
+            "condition": "Used",
+            "description": "A bulky CRT television, still functional."
+        }
+    ]
+}

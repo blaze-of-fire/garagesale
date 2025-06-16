@@ -1,140 +1,18 @@
-const items = document.querySelector('#items');
+import { renderGarageSaleItems } from './itemsTemplate.mjs';
 
-function CreateTemplate() {
-    // `<h3 class="name">${name}</h3>
-    // img src="${image}" alt="${name}" class="image">
-    // <p class="price">Price: $${price}</p>
-    // <p class="quantity">Quantity: ${quantity}</p>
-    // <button></button>
-    // <p class="description">${description}</p>
-    // <div class="decoration-line"></div>
-    // <div class="seperation-line"></div>`
-
-    return `
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>
-        <div class="cart-item">
-            <h3 class="name">Japanese Folding Fan</h3>
-            <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-            <p class="price">Price: $20</p>
-            <p class="quantity">Quantity: 1</p>
-            <button></button>
-            <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-            <div class="decoration-line"></div>
-            <div class="seperation-line"></div>
-        </div>`
+function LoadTheSnipcart() {
+    window.SnipcartSettings = {
+        publicApiKey: 'MmM4ZmY5OGYtZDc4OS00NTk4LTg0NDgtOTY1OTExYWJiM2ZjNjM4ODU3MDAxMTQ3ODE5Nzgw',
+        loadStrategy: 'on-user-interaction',
+        version: "3.0",
+    };
+    
+    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
 }
 
-items.innerHTML = CreateTemplate();
-items.querySelectorAll('button').forEach(button => {
-    button.textContent = 'Add to Cart';
-    button.setAttribute('class', 'add-item');
+
+// 1) Load & render on page load
+document.addEventListener("DOMContentLoaded", () => {
+  renderGarageSaleItems();
+  LoadTheSnipcart();
 });

@@ -1,74 +1,84 @@
 {
     "garage-sale-items": [
         {
-            "name": "Old Bicycle",
-            "price": 50,
-            "available": 3,
-            "condition": "Used",
-            "description": "A slightly rusty but functional bicycle."
+            "Name": "Old Bicycle",
+            "Id": "ob01",
+            "Price": 50,
+            "Available": 3,
+            "Condition": "Used",
+            "Description": "A slightly rusty but functional bicycle."
         },
         {
-            "name": "Vintage Record Player",
-            "price": 100,
-            "available": 1,
-            "condition": "Good",
-            "description": "A classic record player from the 70s, still works great."
+            "Name": "Vintage Record Player",
+            "Id": "vrp02",
+            "Price": 100,
+            "Available": 1,
+            "Condition": "Good",
+            "Description": "A classic record player from the 70s, still works great."
         },
         {
-            "name": "Wooden Coffee Table",
-            "price": 75,
-            "available": 2,
-            "condition": "Fair",
-            "description": "A sturdy coffee table with some scratches."
+            "Name": "Wooden Coffee Table",
+            "Id": "wct03",
+            "Price": 75,
+            "Available": 2,
+            "Condition": "Fair",
+            "Description": "A sturdy coffee table with some scratches."
         },
         {
-            "name": "Set of Golf Clubs",
-            "price": 150,
-            "available": 1,
-            "condition": "Good",
-            "description": "A complete set of golf clubs, perfect for beginners."
+            "Name": "Set of Golf Clubs",
+            "Id": "sgc04",
+            "Price": 150,
+            "Available": 1,
+            "Condition": "Good",
+            "Description": "A complete set of golf clubs, perfect for beginners."
         },
         {
-            "name": "Box of Books",
-            "price": 20,
-            "available": 5,
-            "condition": "Used",
-            "description": "A mixed collection of novels and non-fiction books."
+            "Name": "Box of Books",
+            "Id": "bb05",
+            "Price": 20,
+            "Available": 5,
+            "Condition": "Used",
+            "Description": "A mixed collection of novels and non-fiction books."
         },
         {
-            "name": "Antique Vase",
-            "price": 200,
-            "available": 1,
-            "condition": "Excellent",
-            "description": "A beautiful vase from the early 1900s, in perfect condition."
+            "Name": "Antique Vase",
+            "Id": "av06",
+            "Price": 200,
+            "Available": 1,
+            "Condition": "Excellent",
+            "Description": "A beautiful vase from the early 1900s, in perfect condition."
         },
         {
-            "name": "Camping Tent",
-            "price": 60,
-            "available": 2,
-            "condition": "Good",
-            "description": "A two-person tent, used but still waterproof."
+            "Name": "Camping Tent",
+            "Id": "ct07",
+            "Price": 60,
+            "Available": 2,
+            "Condition": "Good",
+            "Description": "A two-person tent, used but still waterproof."
         },
         {
-            "name": "Kitchen Mixer",
-            "price": 30,
-            "available": 4,
-            "condition": "Fair",
-            "description": "A basic kitchen mixer, works but has some wear."
+            "Name": "Kitchen Mixer",
+            "Id": "km08",
+            "Price": 30,
+            "Available": 4,
+            "Condition": "Fair",
+            "Description": "A basic kitchen mixer, works but has some wear."
         },
         {
-            "name": "Board Games Collection",
-            "price": 40,
-            "available": 1,
-            "condition": "Used",
-            "description": "A collection of popular board games, some pieces missing."
+            "Name": "Board Games Collection",
+            "Id": "bgc09",
+            "Price": 40,
+            "Available": 1,
+            "Condition": "Used",
+            "Description": "A collection of popular board games, some pieces missing."
         },
         {
-            "name": "Old Television",
-            "price": 80,
-            "available": 1,
-            "condition": "Used",
-            "description": "A bulky CRT television, still functional."
+            "Name": "Old Television",
+            "Id": "tv10",
+            "Price": 80,
+            "Available": 1,
+            "Condition": "Used",
+            "Description": "A bulky CRT television, still functional."
         }
     ]
 }

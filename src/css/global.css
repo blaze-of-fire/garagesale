@@ -1,5 +1,5 @@
 :root {
-    --color1: #C8A2C8;
+    --color1: #b05bd4;
     --color2: #FFB6C1;
     --color3: #FFC8A4;
     --color4: #FFDE96;
@@ -10,24 +10,43 @@
 }
 
 header {
+    position: relative; /* establish a positioning context */
+    z-index: 1;
     display: flex;
     align-content: center;
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 2.6px;
-    background-color: var(--color1);
     color: var(--text-color);
     padding: 20px;
     text-align: left;
 }
 
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color1); /* your desired header background color */
+  filter: brightness(1.2);     /* adjust the brightness to your needs */
+  z-index: -1;                /* places this layer behind the header’s content */
+}
+
+
 h1 {
-    color: rgb(71, 71, 71);
+    color: gray;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
 }
 
 .highlightdark {
-    color: #6ce5fa;
+    color: #4070f5;
+    
 }
 
 #cartIcon {
@@ -37,12 +56,12 @@ h1 {
 #cartIcon svg {
     width: 50px;
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 2rem;
+    right: 2rem;
 }
 
 .snipcart-items-count {
-    color: #fda6b9;
+    color: #000000;
     background-color: white;
     text-align: center;
     padding: .18rem .3rem .15rem .35rem;
@@ -50,8 +69,8 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     position: absolute;
-    top: 35px;
-    right: 35px;
+    top: 20px;
+    right: 20px;
 }
 
 main {
@@ -75,7 +94,7 @@ footer {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: rgb(102, 102, 177);
-    color: #d1fdff;
+    color: #f2feff;
     padding: 10px;
     text-align: center;
     border-top: 3px solid var(--color6);

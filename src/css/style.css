@@ -86,18 +86,71 @@
     transition-duration: 0.8s !important; /* default is ~0.3s */
 }
 
-/* Replace with the actual Snipcart cart icon selector */
 .snipcart-cart-header__icon {
-    /* Hide the default icon and text */
     color: transparent;
     background-image: url('../images/cart_icon_red.svg');
     background-repeat: no-repeat;
-    /* Adjust size and positioning as needed */
     width: 30px;
     height: 30px;
-    /* Add other styles for positioning and appearance */
 }
 
 :root {
-  --bgColor-modal: #fff8f5; /* or any color you like */
+  --bgColor-modal: #ffefef;
+    --bgColor-cartItem: #ff0000; /* Adjust to your desired color */
+}
+
+.snipcart-button-primary {
+  background: linear-gradient(90deg, #e90000 0%, #2600ff 100%);
+    filter: brightness(1.1);
+    color: white;
+}
+
+.snipcart-button-primary:hover {
+    filter: brightness(1.03);
+ 
+}
+
+
+.snipcart-item-line__container{
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 155, 155) 50%, #a493ff 100%);
+    
+}
+
+.snipcart-item__details {
+    color: white;
+}
+
+.snipcart-test-banner {
+    border-top: 4px solid rgb(88, 88, 88);
+    transition: transform 0.12s ease-out, opacity;
+}
+
+.snipcart-test-banner__message {
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+
+.snipcart-button-icon.is-danger {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.snipcart-item-quantity__quantity {
+    background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgb(250, 177, 177) 50%, #bcb1fa 100%);
+}
+
+
+.snipcart-item-quantity__quantity:hover {
+    background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgb(250, 177, 177) 50%, #bcb1fa 100%);
+}
+
+.snipcart-button-icon.is-secondary {
+    background-color: rgb(255, 224, 229);
+    color: rgb(112, 19, 19);
+}
+
+.snipcart-button-icon.is-secondary:hover {
+    background-color: rgb(255, 224, 229);
+    color: rgb(112, 19, 19);
+    filter: brightness(1.1);
 }

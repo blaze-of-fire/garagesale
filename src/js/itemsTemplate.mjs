@@ -2,7 +2,6 @@ import { GetItems, getPixabayImage } from "./utils.mjs";
 
 export async function renderGarageSaleItems() {
   try {
-    // adjust the path to your built JSON if needed
     const items = await GetItems("json/items.json");
     const container = document.querySelector("#items");
 
@@ -11,12 +10,12 @@ export async function renderGarageSaleItems() {
       return;
     }
 
-    // 2) Map each item into our template, join into one HTML blob
-    const htmlItems = items
-      .map((item) => garageSaleItemsTemplate(item))
-      .join("");
+    // Map each item into our template asynchronously
+    const htmlItemsArr = await Promise.all(
+      items.map(async (item) => await garageSaleItemsTemplate(item))
+    );
+    const htmlItems = htmlItemsArr.join("");
 
-    // 3) Inject into the DOM
     container.innerHTML = htmlItems;
   } catch (err) {
     console.error("Failed to load items.json:", err);
@@ -26,17 +25,21 @@ export async function renderGarageSaleItems() {
 }
 
 // Our card + Snipcart button template
-function garageSaleItemsTemplate(item) {
+async function garageSaleItemsTemplate(item) {
+  const imageUrl = await getPixabayImage(item.Name);
   return `
     <div class="product-card">
-      <h3 class="name">${item.Name}</h3>
-      <img
-        src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg"
-        alt="${item.Name}"
-        class="image"
-      />
-      <p class="price">Price: $${parseFloat(item.Price).toFixed(2)}</p>
-      <p class="quantity">Available: ${item.Available}</p>
+      <p class="name">${item.Name}</p>
+      <div class="image-container">
+        <img
+          src="${imageUrl}"
+          alt="${item.Name}"
+          loading="lazy"
+          class="image"
+        />
+      </div>
+      <p class="price"><span class="listings">Price</span>: $${parseFloat(item.Price).toFixed(2)}</p>
+      <p class="quantity"><span class="listings">Available</span>: ${item.Available}</p>
       <button
         class="snipcart-add-item"
         data-item-id="${item.Id}"
@@ -44,7 +47,8 @@ function garageSaleItemsTemplate(item) {
         data-item-price="${item.Price}"
         data-item-url="${location.origin + location.pathname}"
         data-item-description="${item.Description}"
-        data-item-image="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg"
+        data-item-image="${imageUrl}"
+        data-item-max-quantity="${item.Available}"
       >
         Add to cart
       </button>
@@ -54,15 +58,3 @@ function garageSaleItemsTemplate(item) {
     </div>
   `;
 }
-
-// old template
-/* <div class="cart-item">
-    <h3 class="name">Japanese Folding Fan</h3>
-    <img src="https://img.freepik.com/free-vector/japanese-folding-fan_1284-13334.jpg?ga=GA1.1.1424288835.1739828773&semt=ais_hybrid&w=250" alt="Japanese Folding Fan" class="image">
-    <p class="price">Price: $20</p>
-    <p class="quantity">Quantity: 1</p>
-    <button></button>
-    <p class="description">A Japanese Folding Fan with amazing artwork that will allow you to feel the wonderful feelings and power of japanese cherry tree</p>
-    <div class="decoration-line"></div>
-    <div class="seperation-line"></div>
-</div> */

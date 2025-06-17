@@ -1,5 +1,4 @@
 export async function GetItems(filepath) {
-    fetch(filepath)
     const response = await fetch(filepath)
 
     if (!response.ok) {
@@ -28,16 +27,26 @@ export function getLocalStorage(key) {
     return value ? JSON.parse(value) : null;
 }
 
-export function getPixabayImage(imageName) {
+export async function getPixabayImage(imageName) {
     const key = '50543630-5edeb4517ed5b5b51b3dd7a46';
-    if (getLocalStorage(imageName) == null) {
-        // Fetch images from Pixabay API
-        let imageurl = GetItems(`https://pixabay.com/api/?key={${key}}&q=${imageName}&image_type=photo`);
-        setLocalStorage(imageName, imageurl);
-    }
-    else {
-        imageurl = getLocalStorage(imageName);
-    }
+    const cached = getLocalStorage(imageName);
     
+    if (typeof cached === 'string') {
+        return cached;
+    }
+    else if (cached) {
+        //Remove bad cache
+        localStorage.removeItem(imageName);
+    }
+
+    // Fetch images from Pixabay API
+    const response = await fetch(`https://pixabay.com/api/?key=${key}&q=${encodeURIComponent(imageName)}&image_type=photo`);
+    const data = await response.json();
+    let imageurl = "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg"
+
+    if (data.hits && data.hits.length > 0) {
+        imageurl = data.hits[0].webformatURL;
+    }
+    setLocalStorage(imageName, imageurl);
     return imageurl;
 }

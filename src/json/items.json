@@ -3,7 +3,7 @@
         {
             "Name": "Old Bicycle",
             "Id": "ob01",
-            "Price": 50,
+            "Price": 25,
             "Available": 3,
             "Condition": "Used",
             "Description": "A slightly rusty but functional bicycle."
@@ -17,23 +17,23 @@
             "Description": "A classic record player from the 70s, still works great."
         },
         {
-            "Name": "Wooden Coffee Table",
+            "Name": "Wooden Table",
             "Id": "wct03",
             "Price": 75,
             "Available": 2,
             "Condition": "Fair",
-            "Description": "A sturdy coffee table with some scratches."
+            "Description": "A sturdy table with some scratches."
         },
         {
-            "Name": "Set of Golf Clubs",
+            "Name": "Set of Golf Balls",
             "Id": "sgc04",
             "Price": 150,
             "Available": 1,
             "Condition": "Good",
-            "Description": "A complete set of golf clubs, perfect for beginners."
+            "Description": "A complete set of golf balls (12), perfect for beginners."
         },
         {
-            "Name": "Box of Books",
+            "Name": "Mixed Books Collection",
             "Id": "bb05",
             "Price": 20,
             "Available": 5,
@@ -62,7 +62,7 @@
             "Price": 30,
             "Available": 4,
             "Condition": "Fair",
-            "Description": "A basic kitchen mixer, works but has some wear."
+            "Description": "A basic kitchen mixer. looks new, works excelent."
         },
         {
             "Name": "Board Games Collection",
@@ -79,6 +79,46 @@
             "Available": 1,
             "Condition": "Used",
             "Description": "A bulky CRT television, still functional."
+        },
+        {
+            "Name": "Fishing Rod",
+            "Id": "fr11",
+            "Price": 45,
+            "Available": 2,
+            "Condition": "Good",
+            "Description": "A medium-sized fishing rod, perfect for beginners."
+        },
+        {
+            "Name": "Fun Jacket",
+            "Id": "fj12",
+            "Price": 15,
+            "Available": 1,
+            "Condition": "Fair",
+            "Description": "A cute stylish jacket without sleeves for your cute little one."
+        },
+        {
+            "Name": "Alarm Clock",
+            "Id": "ac12",
+            "Price": 10,
+            "Available": 3,
+            "Condition": "Good",
+            "Description": "A vintage alarm clock that still ticks perfectly."
+        },
+        {
+            "Name": "Office Chair",
+            "Id": "oc14",
+            "Price": 30,
+            "Available": 2,
+            "Condition": "Used",
+            "Description": "A comfortable office chair with some wear and tear."
+        },
+        {
+            "Name": "Calculator",
+            "Id": "ctl15",
+            "Price": 8,
+            "Available": 5,
+            "Condition": "Used",
+            "Description": "A basic calculator, perfect for school or office use."
         }
     ]
 }

@@ -79,3 +79,25 @@
 .seperation-line {
     display: none;
 }
+
+/* Snipcart v3 - override flyout-cart animation timing */
+.snipcart-modal-mask,
+.snipcart-modal-panel {
+    transition-duration: 0.8s !important; /* default is ~0.3s */
+}
+
+/* Replace with the actual Snipcart cart icon selector */
+.snipcart-cart-header__icon {
+    /* Hide the default icon and text */
+    color: transparent;
+    background-image: url('../images/cart_icon_red.svg');
+    background-repeat: no-repeat;
+    /* Adjust size and positioning as needed */
+    width: 30px;
+    height: 30px;
+    /* Add other styles for positioning and appearance */
+}
+
+:root {
+  --bgColor-modal: #fff8f5; /* or any color you like */
+}

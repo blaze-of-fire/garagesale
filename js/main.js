@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   LoadTheSnipcart();
 });
 
-document.addEventListener('snipcart.ready', () => {
+  // Create a MutationObserver to watch for new nodes in the Snipcart modal
   const observer = new MutationObserver((mutationsList) => {
     mutationsList.forEach((mutation) => {
       mutation.addedNodes.forEach((node) => {
         if (node.nodeType === Node.ELEMENT_NODE) {
-          // Look inside added nodes for our error label
+          // Search for the label element in the newly added nodes
           const buttonLabel = node.querySelector('.snipcart-base-button__label');
           if (buttonLabel) {
             // Find the closest button element that contains this label
             const placeOrderButton = buttonLabel.closest('button');
             if (placeOrderButton) {
-              // Remove any previously attached click handlers (if necessary)
+              // Remove any previous click handlers if necessary
               placeOrderButton.onclick = null;
-              // Override click behavior: prevent normal processing and send the user our homepage
+              // Attach our override click handler that redirects to home instead of processing the order
               placeOrderButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 window.location.href = '/';
@@ -31,6 +31,6 @@ document.addEventListener('snipcart.ready', () => {
       });
     });
   });
-  // Observe the whole body—from now on, any new nodes (including the error modal)
+
+  // Observe the document body for childList changes throughout the subtree
   observer.observe(document.body, { childList: true, subtree: true });
-});

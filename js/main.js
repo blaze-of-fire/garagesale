@@ -8,20 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('snipcart.ready', () => {
-  // Create a MutationObserver to watch for error modals being added
   const observer = new MutationObserver((mutationsList) => {
     mutationsList.forEach((mutation) => {
       mutation.addedNodes.forEach((node) => {
-        // Check if an element representing the error modal was added.
-        // The class names used here are internal and may change.
-        if (node.nodeType === 1 && node.matches('.snipcart-modal')) {
-          const errorModal = node.querySelector('.snipcart-modal--error');
-          if (errorModal) {
-            const placeOrderButton = node.querySelector('.snipcart-btn-place-order');
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          // Look inside added nodes for our error label
+          const buttonLabel = node.querySelector('.snipcart-base-button__label');
+          if (buttonLabel) {
+            // Find the closest button element that contains this label
+            const placeOrderButton = buttonLabel.closest('button');
             if (placeOrderButton) {
-              // Remove any previous click events (if necessary)
+              // Remove any previously attached click handlers (if necessary)
               placeOrderButton.onclick = null;
-              // Override click behavior to redirect home instead of processing order
+              // Override click behavior: prevent normal processing and send the user our homepage
               placeOrderButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 window.location.href = '/';
@@ -32,7 +31,6 @@ document.addEventListener('snipcart.ready', () => {
       });
     });
   });
-
-  // Observe the document body for added nodes (subtree: true to catch deep changes)
+  // Observe the whole body—from now on, any new nodes (including the error modal)
   observer.observe(document.body, { childList: true, subtree: true });
 });

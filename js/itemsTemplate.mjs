@@ -48,7 +48,7 @@ async function garageSaleItemsTemplate(item) {
         data-item-description="${item.Description}"
         data-item-image="${imageUrl}"
         data-item-max-quantity="${item.Available}"
-        data-item-url="${window.location.origin + window.location.pathname}"
+        data-item-url="https://garagesalefun.netlify.app/"
       >
         Add to cart
       </button>

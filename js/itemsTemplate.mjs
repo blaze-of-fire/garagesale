@@ -55,8 +55,6 @@ async function garageSaleItemsTemplate(item) {
         Add to cart
       </button>
       <p class="description">${item.description}</p>
-      <div class="decoration-line"></div>
-      <div class="separation-line"></div>
     </div>
   `;
 }

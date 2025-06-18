@@ -41,6 +41,7 @@ async function garageSaleItemsTemplate(item) {
       </div>
       <p class="price"><span class="listings">Price</span>: $${parseFloat(item.price).toFixed(2)}</p>
       <p class="quantity"><span class="listings">Available</span>: ${item.available}</p>
+      <p class="condition"><span class="listings">Condition</span>: ${item.condition}</p>
       <button
         class="snipcart-add-item"
         data-item-id="${item.id}"

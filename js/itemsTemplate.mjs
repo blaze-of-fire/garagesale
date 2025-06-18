@@ -2,7 +2,7 @@ import { GetItems, getPixabayImage } from "./utils.mjs";
 
 export async function renderGarageSaleItems() {
   try {
-    const items = await GetItems("json/items.json");
+    const items = await GetItems("products.json");
     const container = document.querySelector("#items");
 
     if (!items || items.length === 0) {
@@ -26,33 +26,34 @@ export async function renderGarageSaleItems() {
 
 // Our card + Snipcart button template
 async function garageSaleItemsTemplate(item) {
-  const imageUrl = await getPixabayImage(item.Pixabay || item.Name);
+  const imageUrl = await getPixabayImage(item.pixabay || item.name, item.id);
+  console.log(`The image url for ${item.name}: ${imageUrl}`);
   return `
-    <div class="product-card" id="${item.Id}">
-      <p class="name">${item.Name}</p>
+    <div class="product-card" id="${item.id}">
+      <p class="name">${item.name}</p>
       <div class="image-container">
         <img
           src="${imageUrl}"
-          alt="${item.Name}"
+          alt="${item.name}"
           loading="lazy"
           class="image"
         />
       </div>
-      <p class="price"><span class="listings">Price</span>: $${parseFloat(item.Price).toFixed(2)}</p>
-      <p class="quantity"><span class="listings">Available</span>: ${item.Available}</p>
+      <p class="price"><span class="listings">Price</span>: $${parseFloat(item.price).toFixed(2)}</p>
+      <p class="quantity"><span class="listings">Available</span>: ${item.available}</p>
       <button
         class="snipcart-add-item"
-        data-item-id="${item.Id}"
-        data-item-name="${item.Name}"
-        data-item-price="${item.Price}"
-        data-item-description="${item.Description}"
-        data-item-image="${imageUrl}"
-        data-item-max-quantity="${item.Available}"
+        data-item-id="${item.id}"
+        data-item-name="${item.name}"
+        data-item-price="${item.price}"
+        data-item-description="${item.description}"
+        data-item-image="${item.image}"
+        data-item-max-quantity="${item.available}"
         data-item-url="https://garagesalefun.netlify.app/"
       >
         Add to cart
       </button>
-      <p class="description">${item.Description}</p>
+      <p class="description">${item.description}</p>
       <div class="decoration-line"></div>
       <div class="separation-line"></div>
     </div>

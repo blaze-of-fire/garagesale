@@ -27,7 +27,7 @@ export function getLocalStorage(key) {
     return value ? JSON.parse(value) : null;
 }
 
-export async function getPixabayImage(imageName) {
+export async function getPixabayImage(imageName, id) {
     const key = '50543630-5edeb4517ed5b5b51b3dd7a46';
     const cached = getLocalStorage(imageName);
     
@@ -47,6 +47,6 @@ export async function getPixabayImage(imageName) {
     if (data.hits && data.hits.length > 0) {
         imageurl = data.hits[0].webformatURL;
     }
-    setLocalStorage(imageName, imageurl);
+    setLocalStorage(id, imageurl);
     return imageurl;
 }

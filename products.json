@@ -1,0 +1,166 @@
+[
+    {
+        "id": "ob01",
+        "name": "Old Bicycle",
+        "pixabay": "An Old Bicycle",
+        "image": "https://pixabay.com/get/gc213b79461d1de0c5d9e7a0b6627554db7ea7cd3aadc45efc63dba7dd9b3e3ab44664fc105557bd351b371b7a9a1d93aeb2a80962e9958c4588c7d4ee8b26cb0_640.jpg",
+        "price": 25,
+        "available": 3,
+        "condition": "Used",
+        "description": "A vintage bike in good condition"
+    },
+    {
+        "id": "vrp02",
+        "name": "Vintage Record Player",
+        "pixabay": "A Vintage Record Player",
+        "image": "https://pixabay.com/get/ga56a15059dfd0209b45e2be29d2c8cc09d89505c5634734285a5b10bd84c667b4c4f50b97ed0a3ecd0f87e6a8e1bcd2706898149eab854de247bd58225ca840d_640.jpg",
+        "price": 100,
+        "available": 1,
+        "condition": "Good",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A classic record player from the 70s, still works great."
+    },
+    {
+        "id": "wct03",
+        "name": "Wooden Table",
+        "pixabay": "A Wooden Table",
+        "image": "https://pixabay.com/get/gdb8252a546a33ee7adb19bd72f116b3f104245104ed556bba194e782991345d4cb177b1d729ec895009ead968ae62e2077e95fa70db7a3e56539e4ed10f1d9b0_640.jpg",
+        "price": 75,
+        "available": 2,
+        "condition": "Fair",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A sturdy table with some scratches."
+    },
+    {
+        "id": "sgc04",
+        "name": "Set of Golf Balls",
+        "pixabay": "",
+        "image": "https://pixabay.com/get/g0b04f016772e0b3a1ca837b24c54e12757d12c08ceea0914e4a0d2d28099c1a4af2090c07ed7a48adbfc59eb7aa1142df59fab771b4f823e2781ccc962c0b4e6_640.jpg",
+        "price": 150,
+        "available": 1,
+        "condition": "Good",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A complete set of golf balls (12), perfect for beginners."
+    },
+    {
+        "id": "bb05",
+        "name": "Mixed Books Collection",
+        "pixabay": "A Mixed Books Collection",
+        "image": "https://pixabay.com/get/gd94b01929a9a1490bc870e4785922b896c5ee6eda5f6338655ad46f5c7ca1871b51c2292720df77bbe726c57abe06d0713d9ef003f332c9fca390452d6bec523_640.jpg",
+        "price": 20,
+        "available": 5,
+        "condition": "Used",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A mixed collection of novels and non-fiction books."
+    },
+    {
+        "id": "av06",
+        "name": "Antique Vase",
+        "pixabay": "A Antique Vase",
+        "image": "https://pixabay.com/get/g3f9c4981e6ba372b43e9effe2517241317c9f7fefb4da9fb12d0a687d78a76a0ba7c7a7961430b3696d1c3064c409033_640.jpg",
+        "price": 200,
+        "available": 1,
+        "condition": "Excellent",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A beautiful vase from the early 1900s, in perfect condition."
+    },
+    {
+        "id": "ct07",
+        "name": "Camping Tent",
+        "pixabay": "A Camping Tent",
+        "image": "https://pixabay.com/get/g0f3782b98ce02b0a5ad448235ad6e0bdeb4d2c7208692fa982a20270b163457033bd76deab46e415450aa2c54efcea9047a11d117d54e8f1484c45f99a40e0ab_640.jpg",
+        "price": 60,
+        "available": 2,
+        "condition": "Good",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A two-person tent, used but still waterproof."
+    },
+    {
+        "id": "km08",
+        "name": "Kitchen Mixer",
+        "pixabay": "A Kitchen Mixer",
+        "image": "https://pixabay.com/get/gbeaf1e597281b74c3a19255c14b3a283547a0c2d23023f6b5e3c649a0d1304d05862ce1d45bf955d5a4838f7e86ce110b3ef2e0f4e09847f6de473b611bd5cbf_640.jpg",
+        "price": 30,
+        "available": 4,
+        "condition": "Fair",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A basic kitchen mixer, looks new and works excellent."
+    },
+    {
+        "id": "bgc09",
+        "name": "Board Games Collection",
+        "pixabay": "Board Game",
+        "image": "https://pixabay.com/get/g9984d6c4b779d8c269e599335403986fb42adc3e4d66088eeba9abe717590122106d3dc033ae8e609eee66019af50141_640.jpg",
+        "price": 40,
+        "available": 1,
+        "condition": "Used",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A collection of popular board games, some pieces missing."
+    },
+    {
+        "id": "tv10",
+        "name": "Old Television",
+        "pixabay": "An Old Television",
+        "image": "https://pixabay.com/get/g47b99e60cc224465e7edd06724bb064f0e0be15ad452e7046549edc4ddf52c07b3eebad736a3ebff1ec8f6627d0974f00724c929ca75082eafeec5c7a2faee02_640.jpg",
+        "price": 80,
+        "available": 1,
+        "condition": "Used",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A bulky CRT television, still functional."
+    },
+    {
+        "id": "fr11",
+        "name": "Fishing Rod",
+        "pixabay": "A Fishing",
+        "image": "https://pixabay.com/get/g38cc28b460d1471c3972476c8b0b3220598d02fd45d495062120c9fb3a35dcb221295e67009104780e4db91f723b383d00eae3ba6c888513d41a02d7219f3857_640.jpg",
+        "price": 45,
+        "available": 2,
+        "condition": "Good",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A medium-sized fishing rod, perfect for beginners."
+    },
+    {
+        "id": "fj12",
+        "name": "Fun Jacket",
+        "pixabay": "A Fun Jacket",
+        "image": "https://pixabay.com/get/g6852b520e9650d34db208965a9d6241ababcf7ed338cf0642059d86c0ed495f98d379108214fb2c7af1d4453b1354b30cac3a4836e44c1fecfb4bd8cb4750cea_640.jpg",
+        "price": 15,
+        "available": 1,
+        "condition": "Fair",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A cute stylish jacket without sleeves for your cute little one."
+    },
+    {
+        "id": "ac12",
+        "name": "Alarm Clock",
+        "pixabay": "An Alarm Clock",
+        "image": "https://pixabay.com/get/g4f2f690303f8777188b008965f131e11546d0cccf6bb0a5ab18d4918aaa10e1d6634a522b89acc11fa6867a7556298bece5c7d55ef6be360caebe30dec62e4b5_640.jpg",
+        "price": 10,
+        "available": 3,
+        "condition": "Good",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A vintage alarm clock that still ticks perfectly."
+    },
+    {
+        "id": "oc14",
+        "name": "Office Chair",
+        "pixabay": "An Office Chair",
+        "image": "https://pixabay.com/get/gc49757027fff1a8dc26d223ec234f0a20b359f115f91bb4a8a1f792d71f097c25b9a98269a691d55ae71fb53247a6a14fee9cd59fd02b9ff5e6ea5feb7347c2a_640.jpg",
+        "price": 30,
+        "available": 2,
+        "condition": "Used",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A comfortable office chair with some wear and tear."
+    },
+    {
+        "id": "ctl15",
+        "name": "Calculator",
+        "pixabay": "A Calculator",
+        "image": "https://pixabay.com/get/ge0d93982e8d7fa9ca29731b29dd3cc9783d21bb87ee76341d8b9ec4ab726efea387bb0f7b6f3a8abec4301daea9c7beb_640.jpg",
+        "price": 8,
+        "available": 5,
+        "condition": "Used",
+        "url": "https://garagesalefun.netlify.app/",
+        "description": "A basic calculator, perfect for school or office use."
+    }
+]

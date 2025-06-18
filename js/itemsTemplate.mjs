@@ -28,7 +28,7 @@ export async function renderGarageSaleItems() {
 async function garageSaleItemsTemplate(item) {
   const imageUrl = await getPixabayImage(item.Pixabay || item.Name);
   return `
-    <div class="product-card">
+    <div class="product-card" id="${item.Id}">
       <p class="name">${item.Name}</p>
       <div class="image-container">
         <img
@@ -45,10 +45,10 @@ async function garageSaleItemsTemplate(item) {
         data-item-id="${item.Id}"
         data-item-name="${item.Name}"
         data-item-price="${item.Price}"
-        data-item-url="${location.origin + location.pathname}"
         data-item-description="${item.Description}"
         data-item-image="${imageUrl}"
         data-item-max-quantity="${item.Available}"
+        data-item-url="${window.location.origin + window.location.pathname}"
       >
         Add to cart
       </button>

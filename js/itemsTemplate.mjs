@@ -26,7 +26,7 @@ export async function renderGarageSaleItems() {
 
 // Our card + Snipcart button template
 async function garageSaleItemsTemplate(item) {
-  const imageUrl = await getPixabayImage(item.Name);
+  const imageUrl = await getPixabayImage(item.Pixabay || item.Name);
   return `
     <div class="product-card">
       <p class="name">${item.Name}</p>

@@ -45,11 +45,19 @@ a {
     height: fit-content;
 }
 
+.homePageLink:hover {
+    margin-top: -1.2rem;
+    margin-left: -1rem;
+    transform: scale(0.98);
+}
+
 #garageSaleLogo svg {
     width: 100px;
     height: fit-content;
     position: absolute;
-    top: -1rem; left: 1rem;
+    top: 0rem; left: 1rem;
+    transition: transform 0.2s ease;
+    margin-top: -1.2rem;
 }
 
 h1 {
@@ -58,6 +66,7 @@ h1 {
     font-weight: 700;
     margin: 0;
     text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease;
 }
 
 .highlightdark {
@@ -80,6 +89,7 @@ h1 {
 
 #cartIcon {
     text-decoration: none;
+    display: inline-block;
 }
 
 #cartIcon svg {
@@ -88,7 +98,13 @@ h1 {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    transition: transform 0.2s ease;
 }
+
+#cartIcon:hover svg {
+    transform: scale(0.95);
+}
+
 
 .snipcart-items-count {
     color: #000000;

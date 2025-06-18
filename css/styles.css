@@ -55,7 +55,7 @@ h1 {
     color: gray;
     font-size: 3rem;
     font-weight: 700;
-    margin: 0 0 0 6rem;
+    margin: 0;
     text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
 }
 
@@ -118,7 +118,7 @@ footer {
     border-top: 3px solid var(--color6);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
 
     header{
         height: 4rem;
@@ -143,6 +143,12 @@ footer {
         font-size: large;
         top: 2rem;
         padding: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    #garageSaleLogo {
+        display: none;
     }
 }
 
